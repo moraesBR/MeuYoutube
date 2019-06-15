@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
@@ -14,30 +15,12 @@
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:id="@+id/rbCulinaria"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="@string/cook"
-            android:textSize="16sp" />
-
-        <RadioButton
             android:id="@+id/rbAnimais"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="@string/animal"
-            android:textSize="16sp" />
-
-        <RadioButton
-            android:id="@+id/rbTecnologia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="@string/tech"
             android:textSize="16sp" />
 
         <RadioButton
@@ -50,6 +33,15 @@
             android:textSize="16sp" />
 
         <RadioButton
+            android:id="@+id/rbCulinaria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/cook"
+            android:textSize="16sp" />
+
+        <RadioButton
             android:id="@+id/rbEsporte"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,12 +50,20 @@
             android:text="@string/sport"
             android:textSize="16sp" />
 
+        <RadioButton
+            android:id="@+id/rbTecnologia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/tech"
+            android:textSize="16sp" />
+
     </RadioGroup>
 
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
+    <WebView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

@@ -5,11 +5,19 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.widget.RadioButton;
 
 public class MainActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +30,48 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                RadioButton animais = findViewById(R.id.rbAnimais);
+                RadioButton beleza = findViewById(R.id.rbBeleza);
+                RadioButton culinaria = findViewById(R.id.rbCulinaria);
+                RadioButton esporte = findViewById(R.id.rbEsporte);
+                RadioButton tecnologia = findViewById(R.id.rbTecnologia);
+
+                String link = "https://www.youtube.com/embed/";
+                if(animais.isChecked())
+                    link += "weBk238xnik";
+                else
+                if(beleza.isChecked())
+                    link += "mG8vCbBw1jQ";
+                else
+                if(culinaria.isChecked())
+                    link += "-klBdv6-iEE";
+                else
+                if(esporte.isChecked())
+                    link += "XKfsPa37mS8";
+                else
+                if(tecnologia.isChecked())
+                    link += "pVddfLf-mnA";
+
+                link += "?autoplay=1&vq=small";
+
+                /*
+                try {
+                    VideoView video = findViewById(R.id.video);
+                    video.setVideoURI(Uri.parse(link));
+                    video.start();
+                }
+                catch (Exception ex){
+                    Log.e("onClick fab", ex.getMessage());
+                    Toast.makeText(getApplicationContext(),"Houve um erro...", Toast.LENGTH_LONG).show();
+                }
+                */
+
+                WebView video = findViewById(R.id.video);
+                video.getSettings().setJavaScriptEnabled(true);
+                video.getSettings().setPluginState(WebSettings.PluginState.ON);
+                video.loadUrl(link);
+                video.setWebChromeClient(new WebChromeClient());
+
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
