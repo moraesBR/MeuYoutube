@@ -57,6 +57,13 @@
             android:layout_weight="1"
             android:text="@string/sport"
             android:textSize="16sp" />
+
     </RadioGroup>
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
 
 </LinearLayout>
