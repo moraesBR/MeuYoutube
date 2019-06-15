@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Meu Youtube</string>
+    <string name="action_settings">Settings</string>
+    <string name="cook">Culinária</string>
+    <string name="sport">Esportes</string>
+    <string name="stetic">Estética</string>
+    <string name="tech">Tecnologia</string>
+    <string name="animal">Animais</string>
+</resources>
