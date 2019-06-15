@@ -21,7 +21,8 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="@string/animal"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
         <RadioButton
             android:id="@+id/rbBeleza"
@@ -30,7 +31,8 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="@string/stetic"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
         <RadioButton
             android:id="@+id/rbCulinaria"
@@ -39,7 +41,8 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="@string/cook"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
         <RadioButton
             android:id="@+id/rbEsporte"
@@ -48,7 +51,8 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="@string/sport"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
         <RadioButton
             android:id="@+id/rbTecnologia"
@@ -57,7 +61,8 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="@string/tech"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="italic" />
 
     </RadioGroup>
 
