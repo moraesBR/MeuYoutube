@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,11 +68,17 @@ public class MainActivity extends AppCompatActivity {
                 }
                 */
 
-                WebView video = findViewById(R.id.video);
-                video.getSettings().setJavaScriptEnabled(true);
-                video.getSettings().setPluginState(WebSettings.PluginState.ON);
-                video.loadUrl(link);
-                video.setWebChromeClient(new WebChromeClient());
+                try {
+                    WebView video = findViewById(R.id.video);
+                    video.getSettings().setJavaScriptEnabled(true);
+                    video.getSettings().setPluginState(WebSettings.PluginState.ON);
+                    video.loadUrl(link);
+                    video.setWebChromeClient(new WebChromeClient());
+                }
+                catch (Exception ex){
+                    Log.e("onClick fab", ex.getMessage());
+                    Toast.makeText(getApplicationContext(),"Houve um erro...", Toast.LENGTH_LONG).show();
+                }
 
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
